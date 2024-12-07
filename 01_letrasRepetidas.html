@@ -11,10 +11,20 @@
 
     //ENTRADA
 
-    
+    let listaDeLetras = ["a", "b", "d", "e", "E", "F", "C", "U", "u", "e", "W", "D"];
+    let letras = []; 
+
     //PROCESSAMENTO
 
+    for (const letra of listaDeLetras) {
+        let baixo = letra.toLowerCase();
+        let verificacao = letras.includes(baixo);
+        if(verificacao != true){
+            letras.push(baixo);
+        }
+    }
     
     //SAÍDA
 
+    document.write(`Apenas letras minúsculas: ${letras.join(" - ")}`);
 </script>
