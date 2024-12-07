@@ -7,10 +7,29 @@
 
     //ENTRADA
 
-    
+    const numeroInicial = Number(prompt(`Qual o primeiro número?`));
+    const numeroFinal = Number(prompt(`Qual o número final?`));
+
+    let pares = [];
+    let impares = [];
+
     //PROCESSAMENTO
 
+    if(numeroInicial < numeroFinal){
+        for(let numero = numeroInicial; numero < numeroFinal; numero+=1){
+            if(numero % 2 == 0){
+                pares.push(numero);
+            }
+            else{
+                impares.push(numero);
+            }
+        }
+        document.write(`Números pares: ${pares.join(" - ")} <br> Números ímpares: ${impares.join(" - ")}`);
+    }
+    else{
+        document.write(`ERRO`);
+    }
     
-    //SAÍDA
+    //SAÍDA 
 
 </script>
