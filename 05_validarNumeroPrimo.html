@@ -7,10 +7,26 @@
 
     //ENTRADA
 
+    let numeroInformado = Number(prompt(`Informe um número: `));
+    let numeroPrimo = [1, numeroInformado];
 
     //PROCESSAMENTO
 
+    for(primo = 2; primo < numeroInformado; primo+=1){
+        if(numeroInformado % primo == 0){
+            numeroPrimo.push(primo);
+        }
+    }
+
+    let tamanho = numeroPrimo.length;
 
     //SAÍDA
+
+    if(tamanho > 2){
+        document.write(`O número ${numeroInformado} não é um número primo.`);
+    }
+    else{
+        document.write(`O número ${numeroInformado} é um número primo`);
+    }
 
 </script>
