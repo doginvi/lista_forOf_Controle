@@ -9,10 +9,53 @@
 
     //ENTRADA
 
+    const candidato1 = prompt(`Qual o nome do(a) candidato(a) a representante?`);
+    const candidato2 = prompt(`Qual o nome do(a) candidato(a) a representante?`);
+    const candidato3 = prompt(`Qual o nome do(a) candidato(a) a representante?`);
+    const votantes = Number(prompt(`Quantos alunos votarão?`));
+
+    let votosCandidato1 = [];
+    let votosCandidato2 = [];
+    let votosCandidato3 = [];
 
     //PROCESSAMENTO
 
+    for(let aluno = 0; aluno < votantes; aluno += 1){
+        let voto = Number(prompt(`Escolha um representante:\nPara ${candidato1} digite 1;\nPara ${candidato2} digite 2;\nPara ${candidato3} digite 3`));
+        if(voto == 0 || voto > 3){
+            aluno -= 1;
+            alert("VALOR INCORRETO | DIGITE NOVAMENTE");
+        }
+        else{
+            if(voto == 1){
+                votosCandidato1.push(voto);
+            }
+            else if(voto == 2){
+                votosCandidato2.push(voto);
+            }
+            else{
+                votosCandidato3.push(voto);
+            }
+        }
+    }
+
+    const quantidadeRepresentante1 = votosCandidato1.length;
+    const quantidadeRepresentante2 = votosCandidato2.length;
+    const quantidadeRepresentante3 = votosCandidato3.length;
+
+    const porcentagemRepr1 = (quantidadeRepresentante1 / votantes) * 100;
+    const porcentagemRepr2 = (quantidadeRepresentante2 / votantes) * 100;
+    const porcentagemRepr3 = (quantidadeRepresentante3 / votantes) * 100;
 
     //SAÍDA
+
+    document.write(`Votação:<br>
+    ${candidato1}<br> - Quantidade de votos: ${quantidadeRepresentante1}<br>
+    - Porcentagem de votos: ${porcentagemRepr1.toFixed(2)}%<br>
+    ${candidato2}<br> - Quantidade de votos: ${quantidadeRepresentante2}<br>
+    - Porcentagem de votos: ${porcentagemRepr2.toFixed(2)}%<br>
+    ${candidato3}<br> - Quantidade de votos: ${quantidadeRepresentante3}<br>
+    - Porcentagem de votos: ${porcentagemRepr3.toFixed(2)}%`);
+
 
 </script>
