@@ -7,10 +7,19 @@
 
     //ENTRADA
 
+    let soma = 0;
+
 
     //PROCESSAMENTO
 
+    for(contador = 0; contador < 5; contador += 1){
+        let numeros = Number(prompt(`Informe um número:`));
+        soma = soma + numeros;
+    }
 
     //SAÍDA
+
+    let media = soma / 5;
+    document.write(`A soma dos números informados será: ${soma}<br>A média entre estes números será: ${media.toFixed(1).replace(".", ",")}`);
 
 </script>
