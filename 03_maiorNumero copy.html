@@ -8,10 +8,19 @@
 
     //ENTRADA
 
+    let numeros = [];
 
     //PROCESSAMENTO
 
+    for(contador = 0; contador < 5; contador++){
+        let numeroInformado = Number(prompt(`Informe um número:`));
+        numeros.push(numeroInformado);
+    }
 
     //SAÍDA
+
+    let ordem = numeros.reverse((a, b) => a - b);
+    document.write(`O maior número informado pelo usuário é: ${ordem}`);
+    
 
 </script>
