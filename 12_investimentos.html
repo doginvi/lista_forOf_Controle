@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     /*
     PROBLEMA: Investimentos
@@ -6,10 +7,22 @@
 
     //ENTRADA
 
+    let joao = 1000;
+    let dias = 0;
 
     //PROCESSAMENTO
 
+    for(dias = 0; joao <= 2000; dias+=1){
+        if(dias % 7 == 5 || dias % 7 == 6){
+            joao = joao;
+        }
+        else{
+            joao = joao * 1.02;
+        }
+    }
 
     //SAÍDA
+
+    document.write(`Joãozinho demorará ${dias} para conseguir R$ 2.000,00`);
 
 </script>
